@@ -40,5 +40,5 @@ mongoose.connect(process.env.MONGO_URI, {
     console.error('Database connection error:', err); // Log jika terjadi kesalahan
   });
 
-  const taskRoutes = require('./routes/taskRoutes'); // Mengimpor rute tugas
+  const taskRoutes = require('./routes/taskRoutes/'); // Mengimpor rute tugas
   app.use('/api', taskRoutes); // Menambahkan prefiks /api untuk semua rute
