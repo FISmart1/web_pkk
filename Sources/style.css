@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid black;
+}
+
+nav .logo {
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    height: 45px;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+.logo h4 {
+    text-align: center;
+    margin-top: 8px;
+    font-weight: 550;
+    font-size: 20px;
+}
+
+nav .logo img {
+    width: 45px;
+    height: 45px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+.beda {
+    border-bottom: 2px solid black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+/* Pendahuluan/Pengenalan web */
+.hero {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 50px;
+}
+
+.text {
+    width: 30%;
+}
+
+.text h5 {
+    width: 50%;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 0;
+}
+
+
+
+.images-right {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    justify-content: right;
+    margin-left: 2%;
+}
+
+.images-right img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+/* sambutan */
+
+.jumbroton {
+    display: flex;
+    background-color: #B9FF66;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 80px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.image-left {
+    width: 28%;
+    margin-top: 22px;
+}
+
+.image-left img{
+    width: 56%;
+    height: auto;
+}
+
+.text-right {
+    width: 35%;
+    margin-left: 20px;
+    text-align: justify
+}
+
+.text-right h5{
+    text-align: justify;
+    font-weight: bold;
+    font-size: 22px;
+}
+
