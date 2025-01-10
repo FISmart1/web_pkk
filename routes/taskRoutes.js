@@ -1,15 +1,39 @@
 const express = require('express'); // Mengimpor Express
 const Task = require('../models/Task'); // Mengimpor model Task
+const mongoose = require('mongoose');
+
 
 const router = express.Router(); // Membuat router baru
 
 // Endpoint untuk mendapatkan semua tugas
-router.get('/tasks', async (req, res) => {
+router.get('/tasks/:id?', async (req, res) => {
   try {
-    const tasks = await Task.find(); // Mengambil semua data dari database
-    res.status(200).json(tasks); // Mengembalikan data dengan status 200
+    const { id } = req.params;
+
+    // Jika ID diberikan, cari berdasarkan ID
+    if (id) {
+      // Validasi ID
+      if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(400).json({ error: 'Invalid Task ID' });
+      }
+
+      // Cari task berdasarkan ID
+      const task = await Task.findById(id);
+
+      // Jika task tidak ditemukan
+      if (!task) {
+        return res.status(404).json({ error: 'Task not found' });
+      }
+
+      // Jika ditemukan, kirimkan task
+      return res.status(200).json(task);
+    }
+
+    // Jika ID tidak diberikan, ambil semua data
+    const tasks = await Task.find();
+    res.status(200).json(tasks);
   } catch (err) {
-    res.status(500).json({ error: err.message }); // Menangani kesalahan
+    res.status(500).json({ error: err.message }); // Menangani kesalahan lainnya
   }
 });
 

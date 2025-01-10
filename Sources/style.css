@@ -125,3 +125,64 @@ nav ul li a:hover {
     font-size: 22px;
 }
 
+/* card */
+
+.jumbroton-card {
+
+    margin-bottom: 10px;
+}
+
+.judul {
+    display: flex;
+    margin-left: 18.5%;
+    width: 20%;
+    gap: 20px;
+}
+
+.judul h5 {
+    margin-top: 5%;
+    border-radius: 5px;
+    background-color: #B9FF66;
+    padding: 5px 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.list-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center; /* Vertikal (atas-bawah) */
+    justify-items: center; /* Horizontal (kiri-kanan) */
+
+}
+
+.card {
+    width: 45%;
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    border-radius: 15px;
+    box-shadow:  5px 5px black;
+    border: 1px solid black;
+    padding-bottom: 25px;
+}
+
+.card .text {
+    width: 55%;
+    text-align: justify;
+    margin-left: 10px;
+}
+
+.card .text h5 {
+    font-size: 22px;
+    width: 100%;
+}
+
+.card .text h5 p{
+    text-align: center;
+}
+
+.card .img img {
+    width: 150px;
+    margin-top: 30%;
+    margin-left: 13%;
+}
